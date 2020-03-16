@@ -46,16 +46,16 @@
     font-size: 20px;
 }
  #headerRight .fa-facebook{
-     color: black !important;
+     color:#5250e4 !important;
  }
  #headerRight .fa-twitter{
-    color: #000 !important;
+    color: #10a5d2 !important;
  }
  #headerRight .fa-instagram{
     color: red !important;
  }
  #headerRight .fa-telegram{
-    color: green !important;
+    color: rgb(14, 68, 14)
  }
  #headerLeft img{
      width: 100px;
@@ -159,27 +159,20 @@ color: #ea3b3b;
 }
 #homeGallery img{
     width: 150px;
-    height: 150px;
+    height: 170px;
     float: left;
     margin: 5px 0px 10px 13px;
     border: 2px solid #b34646;
     box-shadow: 4px 4px 4px #3a3434;
 }
-#gallery1{
-    width: 100%;
-    min-height: 200px;
-    height: auto;
-    margin-top: 10px;
-    clear: both;
-}
-#gallery1 img{
-    width: 150px;
-    height: 150px;
-    float: left;
-    margin: 5px 0px 10px 13px;
-    border: 2px solid #b34646;
-    box-shadow: 4px 4px 4px #3a3434;
-}
+    #galleryHub img {
+        width: 150px;
+        height: 200px;
+        float: left;
+        margin: 5px 0px 10px 13px;
+        border: 2px solid #b34646;
+        box-shadow: 4px 4px 4px #3a3434;
+        }
 #LatestVideo{
     width:100%;
     height:auto;

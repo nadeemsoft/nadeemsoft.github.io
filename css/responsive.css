@@ -101,10 +101,7 @@
         top: 8%;
         left: 38%;
     }
-    #Gallery1 img{
-        width:20px;
-        height:30px;
-    }
+    
     #form{
         width: 100%;
         height:auto;
@@ -151,7 +148,22 @@
         left: 40%;
         top: 40%;
     }
-
+    #loginForm {
+        width: auto;
+        min-height: 200px;
+        height: auto;
+        background-color: #eeeeee;
+        border: 2px solid #b34646;
+        margin: 100px 0px 100px 0px
+        }
+        #galleryHub img {
+            width: 93px;
+            height: 116px;
+            float: left;
+            margin: 5px 0px 10px 13px;
+            border: 2px solid #b34646;
+            box-shadow: 4px 4px 4px #3a3434;
+            }
 }
 
 @media screen and (max-width: 480px) {
