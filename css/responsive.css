@@ -138,6 +138,20 @@
         height: 60px;
         margin-top: 16px;
     }
+
+    #preloader #loader {
+        border: 13px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 13px solid #3498db;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 2s linear infinite;
+        position: absolute;
+        left: 40%;
+        top: 40%;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
