@@ -34,12 +34,21 @@ function openLoginPopup(popupValue){
     else if(popupValue == "close"){
         loginPopupId.style.display = "none";
     }
-    else{
-
+}
+function openEnquiryPopup(popupValue){
+    console.log(popupValue);
+    var enquiryPopupId = document.getElementById("enquiryPopup");
+    if(popupValue == "open"){
+        enquiryPopupId.style.cssText = "display:block;";
+    }
+    else if(popupValue == "close"){
+        enquiryPopupId.style.display = "none";
     }
 }
-
-
 // oas-animasion
 AOS.init();
 // oas-animasion
+
+function scrollToTop() { 
+    $(window).scrollTop(0); 
+} 

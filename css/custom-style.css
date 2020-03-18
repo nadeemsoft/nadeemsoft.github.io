@@ -1,5 +1,5 @@
 
-.custom-form-style input[type=text],input[type=email],input[type=password]{
+.custom-form-style input[type=text],input[type=number],input[type=email],input[type=password]{
     width: 98%;
     padding-left: 2%;
     height: 30px;
@@ -30,6 +30,7 @@
     color: #eee;
     border: none;
     border-radius: 5px;
+    margin-top:10px;
   }
 
 

@@ -64,6 +64,8 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     color: #eee;
     right: 48px;
     font-size: 25px;
+    z-index: 1000;
+    cursor: pointer;
 }
  #headerLeft img{
     width: 97px;
@@ -269,7 +271,7 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     border: 2px solid #b34646;
     box-shadow: 4px 4px 4px #3a3434;
 }
-#loginPopup {
+.loginPopup {
     position: fixed;
     top: 0px;
     right: 0px;
@@ -281,6 +283,7 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     display: none;
     
 }
+
 #loginForm{
     width: 30%;
     min-height: 200px;
@@ -309,6 +312,40 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     margin-bottom: 20px;
 }
 #loginForm h4{
+    margin: 20px 0px;
+    font-size: 20px;
+    color: red;
+}
+
+
+#enquiryForm{
+    width: 30%;
+    min-height: 200px;
+    height: auto;
+    background-color: #eeeeee;
+    border: 2px solid #b34646;
+    margin: 100px 0px 100px 0px;
+    padding: 0px 0px 0px 28px;
+    position: absolute;
+    left: 35%;
+}
+#enquiryForm .popup-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: #ffffff;
+    cursor: pointer;
+}
+#enquiryForm form{
+    width: 90%;
+}
+#enquiryForm form input{
+    margin-bottom: 20px;
+}
+#enquiryForm h4{
     margin: 20px 0px;
     font-size: 20px;
     color: red;
@@ -345,4 +382,45 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     100% {
         transform: rotate(360deg);
     }
+}
+
+
+#loginPopupBtn {
+    position: fixed;
+    right: 0px;
+    top: 32%;
+    z-index: 100000;
+    transform: rotateZ(90deg);
+    background:none;
+    border: none;
+    color: #eee;
+    cursor: pointer;
+}
+#loginPopupBtn a {
+    text-decoration: none;
+    color: #eeeeee;
+    padding: 5px 10px;
+    background: red;
+    position: absolute;
+    
+}
+
+#enquiryPopupBtn {
+    position: fixed;
+    left: 28px;
+    top: 32%;
+    z-index: 100000;
+    transform: rotateZ(90deg);
+    background: none;
+    border: none;
+    color: #eee;
+    cursor: pointer;
+}
+#enquiryPopupBtn a {
+    text-decoration: none;
+    color: #eeeeee;
+    padding: 5px 10px;
+    background: green;
+    position: absolute;
+   
 }
