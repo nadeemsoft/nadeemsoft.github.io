@@ -25,17 +25,21 @@ function menuOpenClose() {
     }
 }
 
-function openEnquiryPopup(){
-    var firstNo = 30;
-    var secondNo = 5;
-    if(firstNo > secondNo){
-        alert("first brother is elder than 2nd brother");
+function openLoginPopup(popupValue){
+    console.log(popupValue);
+    var loginPopupId = document.getElementById("loginPopup");
+    if(popupValue == "open"){
+        loginPopupId.style.cssText = "display:block;";
+    }
+    else if(popupValue == "close"){
+        loginPopupId.style.display = "none";
     }
     else{
-        alert("2nd brother is elder than 1st brother");
+
     }
-    // alert(firstNo / secondNo);
 }
+
+
 // oas-animasion
 AOS.init();
 // oas-animasion

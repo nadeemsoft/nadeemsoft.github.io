@@ -12,13 +12,11 @@
     display: flex;
     padding-top: 5px;
     clear: both;
-    background-image: url(../image/bg-header.webp);
+background: linear-gradient(white, rgba(0,212,255,1) 100%);
 }
 #headerLeft{
     width:25%;
     height:100px;
-    font-size: 50px;
-    color: darkred;
 }
 
 #headerCenter{
@@ -49,7 +47,7 @@
      color:#5250e4 !important;
  }
  #headerRight .fa-twitter{
-    color: #10a5d2 !important;
+    color: #06355d !important;
  }
  #headerRight .fa-instagram{
     color: red !important;
@@ -57,9 +55,20 @@
  #headerRight .fa-telegram{
     color: rgb(14, 68, 14)
  }
+ #arrowup{
+    position: fixed;
+    bottom: 17px;
+    background-color: grey;
+    border: none;
+    padding: px px;
+    color: #eee;
+    right: 48px;
+    font-size: 25px;
+}
  #headerLeft img{
-     width: 100px;
-     height: 90px;
+    width: 97px;
+    height: 94px;
+    border-radius: 31px
  }
  #rightLogo{
      list-style:none;
@@ -112,11 +121,13 @@
 }
 #subBanner{
     height: 150px; 
-background: #cfe7fa; /* Old browsers */
-background: -moz-linear-gradient(top,  #cfe7fa 0%, #6393c1 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top,  #cfe7fa 0%,#6393c1 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom,  #cfe7fa 0%,#6393c1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-color: #ea3b3b;
+    background-image: url(../image/sub-banner-1.jpg);
+    color: #eae4e4;
+}
+#subBanner img{
+    width: 100px;
+    height: 150px;
+
 }
 #subBanner h4{
     font-size: 20px;
@@ -193,7 +204,7 @@ color: #ea3b3b;
     height:250px;
     display: flex;
     padding-top: 10px;
-    background-color: #1DA1F2;
+    background:linear-gradient(to bottom, #000000 -81%,#091138 56%);
     clear: both;
 }
 #footer ul{
@@ -234,7 +245,7 @@ color: #ea3b3b;
     height:150px;
     text-align: left;
     color: rgb(248, 246, 246);
-    font-size: 20px;
+    font-size: 17px;
 }
 #registrationForm{
     height: auto;
@@ -258,6 +269,18 @@ color: #ea3b3b;
     border: 2px solid #b34646;
     box-shadow: 4px 4px 4px #3a3434;
 }
+#loginPopup {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 1000000;
+    display: none;
+    
+}
 #loginForm{
     width: 30%;
     min-height: 200px;
@@ -265,6 +288,19 @@ color: #ea3b3b;
     background-color: #eeeeee;
     border: 2px solid #b34646;
     margin: 100px 0px 100px 0px;
+    padding: 0px 0px 0px 28px;
+    position: absolute;
+    left: 35%;
+}
+#loginForm .popup-close{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color: #ffffff;
+    cursor: pointer;
 }
 #loginForm form{
     width: 90%;
@@ -288,7 +324,7 @@ color: #ea3b3b;
     left: 0px;
     background-color: black;
     opacity: 0.9;
-    z-index: 99;
+    z-index: 1000000;
 }
 #preloader #loader {
     border: 16px solid #f3f3f3;
