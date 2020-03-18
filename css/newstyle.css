@@ -70,7 +70,8 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
  #headerLeft img{
     width: 97px;
     height: 94px;
-    border-radius: 31px
+    border-radius: 31px;
+    margin-right: 121px;
  }
  #rightLogo{
      list-style:none;
@@ -125,11 +126,13 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     height: 150px; 
     background-image: url(../image/sub-banner-1.jpg);
     color: #eae4e4;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 #subBanner img{
     width: 100px;
     height: 150px;
-
+    
 }
 #subBanner h4{
     font-size: 20px;
@@ -185,6 +188,15 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
         margin: 5px 0px 10px 13px;
         border: 2px solid #b34646;
         box-shadow: 4px 4px 4px #3a3434;
+        }
+        .view-all {
+            background: gray;
+            padding: 5px 10px;
+            text-decoration: none;
+            color: #eee;
+            border-radius: 4px;
+            position: relative;
+            top: 13px;
         }
 #LatestVideo{
     width:100%;
@@ -386,15 +398,16 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
 
 
 #loginPopupBtn {
-    position: fixed;
-    right: 0px;
-    top: 32%;
+    position: absolute;
+    top: 10%;
     z-index: 100000;
-    transform: rotateZ(90deg);
-    background:none;
+    background: none;
     border: none;
     color: #eee;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    left: 242px;
 }
 #loginPopupBtn a {
     text-decoration: none;
@@ -402,15 +415,15 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     padding: 5px 10px;
     background: red;
     position: absolute;
+    border-radius: 10px;
     
 }
 
 #enquiryPopupBtn {
-    position: fixed;
-    left: 28px;
-    top: 32%;
+    position: ABSOLUTE;
+    left: 231px;
+    top:4%;
     z-index: 100000;
-    transform: rotateZ(90deg);
     background: none;
     border: none;
     color: #eee;
@@ -420,7 +433,10 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     text-decoration: none;
     color: #eeeeee;
     padding: 5px 10px;
-    background: green;
+    background: rgb(6, 68, 6);
     position: absolute;
+    border-radius: 10px;
+    letter-spacing: 2px;
+    text-transform:uppercase;
    
 }

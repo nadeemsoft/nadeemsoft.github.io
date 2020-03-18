@@ -186,4 +186,61 @@
     .responsivemenu li{
         display: block !important;
     } 
+    
+
+#enquiryPopupBtn {
+    position: ABSOLUTE;
+    left: 63px;
+    top: 7%;
+    z-index: 100000;
+    background: none; 
+    border: none;
+    color: #eee;
+    cursor: pointer;
+   }
+   #enquiryPopupBtn a {
+    text-decoration: none;
+    color: #eeeeee;
+    padding: 5px 10px;
+    background: rgb(6, 68, 6);
+    position: absolute;
+    border-radius: 10px;
+    letter-spacing: 0px;
+    font-size: 9px;
+    }
+    #loginPopupBtn {
+        position: absolute;
+        top: 7%;
+        z-index: 100000;
+        background: none;
+        border: none;
+        color: #eee;
+        cursor: pointer;
+        letter-spacing: 0;
+        left: 238px;
+       }
+       
+
+#loginPopupBtn a {
+    text-decoration: none;
+    color: #eeeeee;
+    padding: 5px 10px;
+    background: red;
+    position: absolute;
+    border-radius: 10px;
+    font-size: 10px
+    }
+    
+
+#arrowup {
+    position: fixed;
+    bottom: 16px;
+    background-color: grey;
+    border: none;
+    color: #eee;
+    right: 25px;
+    font-size: 20px;
+    z-index: 1000;
+    cursor: pointer;
+    }
 }
