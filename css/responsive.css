@@ -157,10 +157,10 @@
         margin: 100px 0px 100px 0px
         }
         #galleryHub img {
-            width: 93px;
-            height: 116px;
+            width:65px;
+            height:67px;
             float: left;
-            margin: 5px 0px 10px 13px;
+            margin: 5px 0px 10px 12px;
             border: 2px solid #b34646;
             box-shadow: 4px 4px 4px #3a3434;
             }
@@ -210,16 +210,37 @@
     }
     #loginPopupBtn {
         position: absolute;
-        top: 7%;
+        top:11%;
         z-index: 100000;
         background: none;
         border: none;
         color: #eee;
         cursor: pointer;
-        letter-spacing: 0;
-        left: 238px;
+        letter-spacing:1px;
+        left:64px;
        }
-       
+       #loginForm {
+        width: 87%;
+        min-height: 200px;
+        height: auto;
+        background-color: #eeeeee;
+        border: 2px solid #b34646;
+        left:6px;
+        top: 42px;
+        }
+        #enquiryForm {
+            width:87%;
+            min-height: 200px;
+            height: auto;
+            background-color: #eeeeee;
+            border: 2px solid #b34646;
+            position: absolute;
+            left: 6px;
+            top:45px;
+           }
+           #registrationForm{
+               width: 90%;
+           }
 
 #loginPopupBtn a {
     text-decoration: none;
@@ -243,4 +264,19 @@
     z-index: 1000;
     cursor: pointer;
     }
+    #homeGallery img {
+        width: 70px;
+        height: 89px;
+        float: left;
+        margin: 5px -1px 10px 9px;
+        border: 2px solid #b34646;
+        box-shadow: 4px 4px 4px #3a3434;
+        }
+        #LatestVideo iframe{
+            width: 72px;
+            height: 70px;
+            text-align: left;
+            margin-left: 9px;
+            margin-top: 10px;
+        }
 }
