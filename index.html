@@ -306,33 +306,13 @@
     <!--oas animanion-->
     <script src="vendors/oas-animation/aos.js"></script>
     <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/api_ajax.js" type="text/javascript"></script>
     <script>
         function submitLoginForm() {
             var emailId = document.getElementById("emailId").value;
             var password = document.getElementById("password").value;
             alert("form Submitted.." + emailId);
         }
- 
-$.ajax({
-        type:"get",
-        url: "http://mgcollege.pythonanywhere.com/apiv1/banners", 
-        dataType:"json",
-        success: function(response){
-            console.log(response);
-            var i;
-            var imgList = '';
-            for (i = 0; i < response.length; i++) {
-                console.log(response[i].image);
-                imgList +="<li><img src="+response[i].image+"></li>";
-            }
-            document.getElementById("fullscreen-slider").innerHTML = imgList;
-        }
-    });
-    
-    setTimeout(function(){
-        $("#fullscreen-slider").slider();
-    }, 3000);  
-
 
     </script>
 </body>
