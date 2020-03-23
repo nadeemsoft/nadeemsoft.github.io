@@ -126,6 +126,9 @@
                     <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="ContactUs.html">contact us</a></li>
                     <li><a href="registration.html">Registraion Form</a></li>
+                    <input id="search" type="text" placeholder="search for more information">
+                    <i style="margin-top:7px; margin-left: 10px; color: rgb(241, 7, 7);font-size: 20px;"
+                        class="fa fa-search" aria-hidden="true"></i>
                 </ul>
                 <a href="javascript:void(0);" class="icon" id="icon" onclick="menuOpenClose()" style="display: none;">
                     <i class="fa fa-bars"></i>
@@ -135,10 +138,10 @@
 
             <div id="bannerSlider">
                 <ul class="slider" id="fullscreen-slider">
-                    <li><img src="image/banner5.jpg" alt="slide1" /></li>
+                   <!-- <li><img src="image/banner5.jpg" alt="slide1" /></li>
                     <li><img src="image/banner6.jpg" alt="slide2" /></li>
                     <li><img src="image/banner4.jpg" alt="slide3" /></li>
-                    <li><img src="image/banner7.jpg" alt=""></li>
+                    <li><img src="image/banner7.jpg" alt=""></li> -->
                 </ul>
             </div>
             <!--end of bannerSlider-->
@@ -186,8 +189,7 @@
                 <!--end of content left-->
                 <div id="contentRight">
                     <h2 id="latestUpdates">Latest Updates</h2>
-                    <marquee direction="up"
-                    behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
+                    <marquee direction="up" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
                         <p style="font-size:17px; text-align:justify; color:black; margin: 5px;height:350px;">
                             <b>Mirza Ghalib College </b>
                             All the information about college and its courses are taken from college website.
@@ -196,7 +198,7 @@
                             If you are administrator or webmaster and wish to update information, please get in touch
                             with us.......
                             Generations of past students, both male and female, are proud to be known and enjoy
-                             maintaining their connection with the college and each other.
+                            maintaining their connection with the college and each other.
                         </p>
                     </marquee>
                 </div>
@@ -282,9 +284,10 @@
                 <!--end of footer right-->
                 <div id="footerFour">
                     <h5 class="footerHeading">Address</h5>
-                    <p>
-                        vill+po=Kerap Ps=Rafiganj Dist=Aurangbad
-                    </p>
+                    <p>Mirza Ghalib College, Gaya,</p>
+                    <p>White House Compound Gaya</p>
+                    <p>pin-code:823001 Gaya, (Bihar)India</p>
+                    <p>contact-no:0631 222 0778</p>
                 </div>
                 <!--end of footer four-->
             </div>
@@ -308,6 +311,28 @@
             var password = document.getElementById("password").value;
             alert("form Submitted.." + emailId);
         }
+ 
+$.ajax({
+        type:"get",
+        url: "http://mgcollege.pythonanywhere.com/apiv1/banners", 
+        dataType:"json",
+        success: function(response){
+            console.log(response);
+            var i;
+            var imgList = '';
+            for (i = 0; i < response.length; i++) {
+                console.log(response[i].image);
+                imgList +="<li><img src="+response[i].image+"></li>";
+            }
+            document.getElementById("fullscreen-slider").innerHTML = imgList;
+        }
+    });
+    
+    setTimeout(function(){
+        $("#fullscreen-slider").slider();
+    }, 3000);  
+
+
     </script>
 </body>
 
