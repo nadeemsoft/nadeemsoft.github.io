@@ -6,12 +6,6 @@ $(window).on('load',function(){
 
 // alert('Nadeem you are expert in js....');
  
-    $(document).ready(function(){
-        $('#lightgallery').lightGallery({
-            mode: 'lg-zoom-out-in'
-        });
-    });
-
 
 function submitLoginForm() {
     var emailId = document.getElementById("emailId").value;
