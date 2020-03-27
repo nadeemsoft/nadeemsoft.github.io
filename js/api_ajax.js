@@ -42,7 +42,7 @@ $.ajax({
         var i;
         var galleryImgList = ''; 
         for (i = 0; i<response.length; i++ ){
-            console.log(response[i].image);
+            // console.log(response[i].image);
             galleryImgList += '<a href="'+response[i].image+'" target="blank"><img src="'+response[i].image+'"></a>';
         }
         document.getElementById("lightgallery").innerHTML = galleryImgList;

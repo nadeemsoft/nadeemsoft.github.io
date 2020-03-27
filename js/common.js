@@ -1,7 +1,10 @@
 
+
+
 $(window).on('load',function(){
     $('#loader').fadeOut('slow');
     $('#preloader').fadeOut('slow');
+    
 });
 
 // alert('Nadeem you are expert in js....');
