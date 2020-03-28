@@ -1,22 +1,3 @@
-//banner ajax call
-$.ajax({
-    type:"get",
-    url: "http://mgcollege.pythonanywhere.com/apiv1/banners",
-    dataType:"json",
-    success: function(response){
-        var i;
-        var imgList = '';
-        for (i = 0; i < response.length; i++) {
-            // console.log(response[i].image);
-            imgList +="<li><img src="+response[i].image+"></li>";
-        }
-        document.getElementById("fullscreen-slider").innerHTML = imgList;
-        setTimeout(function(){
-            $("#fullscreen-slider").slider();
-        }, 1000);
-    }
-});
-//banner ajax call
 
 $.ajax({
     type:"get",
@@ -34,22 +15,3 @@ $.ajax({
     }
 });
 
-$.ajax({
-    type:"get",
-    url:"http://mgcollege.pythonanywhere.com/apiv1/latest_gallery",
-    dataType:"json",
-    success:function(response){
-        var i;
-        var galleryImgList = ''; 
-        for (i = 0; i<response.length; i++ ){
-            // console.log(response[i].image);
-            galleryImgList += '<a href="'+response[i].image+'" target="blank"><img src="'+response[i].image+'"></a>';
-        }
-        document.getElementById("lightgallery").innerHTML = galleryImgList;
-        $('#lightgallery').lightGallery({
-            mode: 'lg-zoom-out-in'
-        });
-        
-        
-    }
-});
