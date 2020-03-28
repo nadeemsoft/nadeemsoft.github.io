@@ -140,7 +140,7 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     padding: 64px;
     text-transform: uppercase;
 }
-#content{
+.content{
     width:100%;
     height:auto;
     min-height: 300px;
