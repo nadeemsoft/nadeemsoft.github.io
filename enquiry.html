@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enquiry</title>
+    <meta charset="utf-8">
+    <!--meta element used by browser,(how to display content) by search engine keyword-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.-->
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <!--jquery-->
+    <script src="js/jquery.min.js"></script>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--style-->
+    <link rel="stylesheet" type="text/css" href="css/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <!--responsive css-->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!--slider css-->
+    <link rel="stylesheet" href="vendors/slider/css/slider.css">
+    <!--gallery css-->
+    <link rel="stylesheet" href="vendors/lightGallery/css/lightgallery.css">
+    <link rel="stylesheet" href="vendors/lightGallery/css/lg-transitions.min.css">
+    <!--oas animanion-->
+    <link href="vendors/oas-animation/aos.css" rel="stylesheet">
+</head>
+<body>
+     <!--preloader-->
+     <div id="preloader">
+        <div id="loader"></div>
+    </div>
+     <!--preloader-->
+    <div id="commonPopup">
+
+    </div>
+    <center>
+        <div id="wrapper">
+            <div id="header">
+
+            </div>
+            <!--end of header-->
+            <div id="menu">
+                
+            </div>
+            <!--end of menu-->
+
+
+            <div id="subBanner">
+                <h4>Enquiry</h4>
+            </div>
+            <!--end of bannerSlider-->
+            <div class="content">
+
+            </div>
+            <!--end of content-->
+
+            <div id="footer">
+               
+            </div>
+            <!--end of footer-->
+        </div>
+        <!--end of wrapper-->
+    </center>
+
+    <!--slider js-->
+    <script src="vendors/slider/js/prism.js"></script>
+    <script src="vendors/slider/js/slider.js"></script>
+    <!--gallery js-->
+    <script src="vendors/lightGallery/js/lightgallery-all.js"></script>
+    <!--oas animanion-->
+    <script src="vendors/oas-animation/aos.js"></script>
+    <script src="js/common.js" type="text/javascript"></script>
+    <script src="js/api_ajax.js" type="text/javascript"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("#header").load("https://nadeemsoft.github.io/header.html");
+            $("#menu").load("https://nadeemsoft.github.io/menu.html");
+            $("#commonPopup").load("https://nadeemsoft.github.io/commonPopup.html");
+            $("#footer").load("https://nadeemsoft.github.io/footer.html");
+        });
+
+    </script>
+
+</body>
+
+</html>
