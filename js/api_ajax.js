@@ -12,6 +12,7 @@ $.ajax({
     document.getElementById("twitterUrl").href = response[0].twitter_link;
     document.getElementById("instagramUrl").href = response[0].instagram_link;
     document.getElementById("linkedinUrl").href = response[0].linkedin_link;
+    document.getElementById("footerAddress").href = response[0].organisation_name;
     }
 });
 
