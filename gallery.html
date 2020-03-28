@@ -28,58 +28,8 @@
     </div>
     <!--ended preloader-->
     <!--login popup-->
-    <div id="loginPopup" class="loginPopup">
-        <div id="loginForm" class="custom-form-style">
-            <h4>Login</h4>
-            <button class="popup-close" type="button" onclick="openLoginPopup('close')"><i class="fa fa-times"
-                    aria-hidden="true"></i></button>
-            <form action="javascript:void(0)" method="POST" onsubmit="return submitLoginForm()">
-                <p><input type="email" id="emailId" name="emailId" placeholder="Enter Email Id.." required></p>
-                <p><input type="password" id="password" name="password" placeholder="Enter Password.." required></p>
-                <p><input type="submit" value="Login"></p>
-            </form>
-        </div>
-        <!--end of form-->
+    <div id="commonPopup">
     </div>
-    <!--login popup-->
-    <!--enquiryPopup popup-->
-    <div id="enquiryPopup" class="loginPopup">
-        <div id="enquiryForm" class="custom-form-style">
-            <h4>Enquiry</h4>
-            <button class="popup-close" type="button" onclick="openEnquiryPopup('close')"><i class="fa fa-times"
-                    aria-hidden="true"></i></button>
-            <form action="javascript:void(0)" method="POST">
-                <p><input type="text" id="name" name="name" placeholder="Enter Name." required></p>
-                <p><input type="number" id="mobileNo" name="mobileNo" placeholder="Enter Mobile No." required></p>
-                <p><input type="email" id="emailId" name="emailId" placeholder="Enter Email Id.." required></p>
-                <p><select>
-                        <option value="">--select Course</option>
-                        <option value="BCA">BCA</option>
-                        <option value="MCA">MCA</option>
-                    </select></p>
-                <p><input type="submit" value="submit"></p>
-            </form>
-        </div>
-    </div>
-    <!--enquiryPopup popup--><div id="loginPopupBtn" type="button">
-        <a href="javascript:void(0)" onclick="openLoginPopup('open')">Login</a>
-    </div>
-    <!--end of loginPopupBtn-->
-
-    <div id="enquiryPopupBtn" type="button">
-        <a href="javascript:void(0)" onclick="openEnquiryPopup('open')">Enquiry</a>
-    </div>
-    <!--end of enquiryPopupBtn-->
-     <!--arrowup-->
-     <div id="arrowup">
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
-    </div>
-    <!--end of arrowup-->
-     <!--arrowup-->
-     <div id="arrowup" onclick="scrollToTop()">
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
-    </div>
-    <!--end of arrowup-->
 <center>
 <div id="wrapper">
     <div id="header">
