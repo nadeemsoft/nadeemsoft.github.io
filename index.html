@@ -3,50 +3,48 @@
 
 <head>
     <title>Welcome To Mirza Ghalib College Gaya</title>
-      <!--jquery-->
-      
-      <meta charset="utf-8">
-      <!--meta element used by browser,(how to display content) by search engine keyword-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.-->
-      <meta name="description" content="Free Web tutorials">
-      <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-      <script src="js/jquery.min.js"></script>
-      <!--font-awesome-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!--style-->
-      <link rel="stylesheet" type="text/css" href="css/newstyle.css">
-      <link rel="stylesheet" type="text/css" href="css/custom-style.css">
-      <!--responsive css-->
-      <link rel="stylesheet" type="text/css" href="css/responsive.css">
-      <!--slider css-->
-      <link rel="stylesheet" href="vendors/slider/css/slider.css">
-      <!--gallery css-->
-      <link rel="stylesheet" href="vendors/lightGallery/css/lightgallery.css">
-      <link rel="stylesheet" href="vendors/lightGallery/css/lg-transitions.min.css">
-      <!--oas animanion-->
-      <link href="vendors/oas-animation/aos.css" rel="stylesheet">
+    <!--jquery-->
+
+    <meta charset="utf-8">
+    <!--meta element used by browser,(how to display content) by search engine keyword-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.-->
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <script src="js/jquery.min.js"></script>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--style-->
+    <link rel="stylesheet" type="text/css" href="css/newstyle.css">
+    <link rel="stylesheet" type="text/css" href="css/custom-style.css">
+    <!--responsive css-->
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <!--slider css-->
+    <link rel="stylesheet" href="vendors/slider/css/slider.css">
+    <!--gallery css-->
+    <link rel="stylesheet" href="vendors/lightGallery/css/lightgallery.css">
+    <link rel="stylesheet" href="vendors/lightGallery/css/lg-transitions.min.css">
+    <!--oas animanion-->
+    <link href="vendors/oas-animation/aos.css" rel="stylesheet">
 
 </head>
 
 <body>
-     <!--preloader-->
-     <div id="preloader">
+    <!--preloader-->
+    <div id="preloader">
         <div id="loader"></div>
     </div>
-     <!--preloader-->
+    <!--preloader-->
     <div id="commonPopup">
-  
-
     </div>
     <center>
         <div id="wrapper">
             <div id="header">
-             
+
             </div>
             <!--end of header-->
             <div id="menu">
-               
+
             </div>
             <!--end of menu-->
 
@@ -154,12 +152,11 @@
             <!--end of homeGallery-->
             <section id="LatestVideo" data-aos="fade-up" data-aos-duration="1000">
                 <h2 style="font-size:25px; text-transform:capitalize; color: crimson;text-align: left;background: #eeeeee;    padding-left: 10px;
-    ">Videos</h2>
+                ">Videos</h2>
                 <iframe src="https://www.youtube.com/embed/OsR0pDE0zwo" frameborder="0" allowfullscreen></iframe>
                 <iframe src="https://www.youtube.com/embed/tCAt8eEKPDc" frameborder="0" allowfullscreen></iframe>
                 <iframe src="https://www.youtube.com/embed/Fkd9TWUtFm0" frameborder="0" allowfullscreen></iframe>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/oV74Najm6Nc" frameborder="0"
-                    allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/oV74Najm6Nc" frameborder="0" allowfullscreen></iframe>
 
             </section>
             <!--end of LatestVideo-->
@@ -195,42 +192,43 @@
 
         //banner ajax call
         $.ajax({
-            type:"get",
+            type: "get",
             url: "http://mgcollege.pythonanywhere.com/apiv1/banners",
-            dataType:"json",
-            success: function(response){
+            dataType: "json",
+            success: function (response) {
                 var i;
                 var imgList = '';
                 for (i = 0; i < response.length; i++) {
                     // console.log(response[i].image);
-                    imgList +="<li><img src="+response[i].image+"></li>";
+                    imgList += "<li><img src=" + response[i].image + "></li>";
                 }
                 document.getElementById("fullscreen-slider").innerHTML = imgList;
-                setTimeout(function(){
+                setTimeout(function () {
                     $("#fullscreen-slider").slider();
                 }, 1000);
             }
         });
         //banner ajax call
         $.ajax({
-            type:"get",
-            url:"http://mgcollege.pythonanywhere.com/apiv1/latest_gallery",
-            dataType:"json",
-            success:function(response){
+            type: "get",
+            url: "http://mgcollege.pythonanywhere.com/apiv1/latest_gallery",
+            dataType: "json",
+            success: function (response) {
                 var i;
-                var galleryImgList = ''; 
-                for (i = 0; i<response.length; i++ ){
+                var galleryImgList = '';
+                for (i = 0; i < response.length; i++) {
                     // console.log(response[i].image);
-                    galleryImgList += '<a href="'+response[i].image+'" target="blank"><img src="'+response[i].image+'"></a>';
+                    galleryImgList += '<a href="' + response[i].image + '" target="blank"><img src="' + response[i].image + '"></a>';
                 }
                 document.getElementById("lightgallery").innerHTML = galleryImgList;
                 $('#lightgallery').lightGallery({
                     mode: 'lg-zoom-out-in'
-                });    
+                });
             }
         });
         //gallery ajax call
 
     </script>
 </body>
+
 </html>
