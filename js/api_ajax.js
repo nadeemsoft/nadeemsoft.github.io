@@ -12,7 +12,12 @@ $.ajax({
     document.getElementById("twitterUrl").href = response[0].twitter_link;
     document.getElementById("instagramUrl").href = response[0].instagram_link;
     document.getElementById("linkedinUrl").href = response[0].linkedin_link;
-    document.getElementById("footerAddress").href = response[0].organisation_name;
+    //this is for footer
+    document.getElementById("footerFb").href = response[0].facebook_link;
+    document.getElementById("fTwitter").href = response[0].twitter_link;
+    document.getElementById("flinkedIn").href = response[0].linkedin_link;
+    document.getElementById("fInstagram").href = response[0].instagram_link;
+    document.getElementById("footerAddress").innerHTML = response[0].address;
     }
 });
 
