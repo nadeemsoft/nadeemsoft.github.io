@@ -48,7 +48,7 @@ function openEnquiryPopup(popupValue){
 
 function saveEnquiry(){
     alert("form submitted");
-    var formData = new FormData($("#enquiryForm")[0]);
+    var formData = new FormData($("#getEnquiry")[0]);
     console.log(formData);
 }
 // oas-animasion
