@@ -23,21 +23,14 @@
         <h4>Enquiry</h4>
         <button class="popup-close" type="button" onclick="openEnquiryPopup('close')"><i class="fa fa-times"
                 aria-hidden="true"></i></button>
-        <form action="javascript:void(0)" id="getEnquiry" method="POST" onsubmit="return saveEnquiry()">
+        <form action="javascript:void(0)" method="POST">
             <p><input type="text" id="name" name="name" placeholder="Enter Name." required></p>
-            <p><input type="email" id="email" name="email" placeholder="Enter Email Id.." required></p>
-            <p><input type="number" id="mobile_no" name="mobile_no" placeholder="Enter Mobile No." required></p>
-            <p><textarea cols="4" role="10"  id="message" name="message" placeholder="Enter Message." required></textarea></p>
-            
-            <p><select name="coursedept" required>
-                    <option value="">--select Course Dept</option>
-                    <option value="1">Science</option>
-                    <option value="2">Commerce</option>
-                </select></p>
-                <p><select name="courses">
+            <p><input type="number" id="mobileNo" name="mobileNo" placeholder="Enter Mobile No." required></p>
+            <p><input type="email" id="emailId" name="emailId" placeholder="Enter Email Id.." required></p>
+            <p><select>
                     <option value="">--select Course</option>
-                    <option value="1">ISC</option>
-                    <option value="2">BSC</option>
+                    <option value="BCA">BCA</option>
+                    <option value="MCA">MCA</option>
                 </select></p>
             <p><input type="submit" value="submit"></p>
         </form>
