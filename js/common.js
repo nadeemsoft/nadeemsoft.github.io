@@ -1,6 +1,4 @@
 
-
-
 $(window).on('load',function(){
     $('#loader').fadeOut('slow');
     $('#preloader').fadeOut('slow');
@@ -46,6 +44,12 @@ function openEnquiryPopup(popupValue){
     else if(popupValue == "close"){
         enquiryPopupId.style.display = "none";
     }
+}
+
+function saveEnquiry(){
+    alert("form submitted");
+    var formData = new FormData($("#enquiryForm")[0]);
+    console.log(formData);
 }
 // oas-animasion
 AOS.init();
