@@ -139,6 +139,7 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     font-weight: 600;
     padding: 64px;
     text-transform: uppercase;
+    text-align: center;
 }
 .content{
     width:100%;
@@ -164,6 +165,7 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     height:410px;
     float: left;
     margin-left:5px;
+    text-align: left;
 }
 #homeGallery{
     width: 100%;
@@ -363,8 +365,22 @@ background: linear-gradient(white, rgba(0,212,255,1) 100%);
     color: red;
 }
 
-
-
+#pleaseWait {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #ffffff;
+    opacity: 0.9;
+    z-index: 1000000;
+    display: none;
+}
+#pleaseWait img{
+    position: relative;
+    left: 39%;
+    top: 10%;
+}
 #preloader {
     position: fixed;
     top: 0px;

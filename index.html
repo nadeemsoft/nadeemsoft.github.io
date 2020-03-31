@@ -9,7 +9,7 @@
     <!--meta element used by browser,(how to display content) by search engine keyword-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.-->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="description" content="Free Web tutorials">
     <meta name="keywords" content="HTML,CSS,XML,JavaScript">
     <script src="js/jquery.min.js"></script>
@@ -61,58 +61,15 @@
             <!--end of bannerSlider-->
             <section id="content">
                 <div id="contentLeft">
-                    <h2 style="font-size:25px; text-transform: capitalize; color: crimson;">WELCOME TO MG COLLEGE GAYA
-                    </h2>
-                    <p style="font-size:17px; text-align: justify; margin: 5px;">
-                        <b>About M G College, Gaya</b>
-                        M.G. College, Gaya is Established in 1970 and affiliated to Magdh University. The collage offers
-                        Bachelor of Arts, Bachelor of Science and Bachelor of commerce degree courses. The collage
-                        offers Bachelor of Arts, Bachelor of Science and Bachelor of Commerce courses.Aug 20, 2014
-                        Affiliated to: Magadh University, Bodh Gaya
-                        City: Gaya, Bihar, India</p>
-                    <hr>
-                    <h1>HISTORY</h1>
-                    <P style="font-size:17px; text-align: justify; margin: 5px;">
-                        Efforts of philanthropists Khan Bahadur Abdul Hafeez (Founder President) and Abdus Salam
-                        (Founder Secretary), Mirza Ghalib College, Gaya, a Government Aided Muslim Minority P.G. Unit of
-                        Magadh University,
-                        Bodh-Gaya, Bihar, came into existence in 1969, centenary year of Mirza Asadullah Begh Khan
-                        Ghalib, a great Urdu poet.
-                        Khan Bahadur Abdul Hafeez was a retired Deputy Commissioner of Excise of North Bihar under the
-                        British government.
-                        He received his title of Khan Bahadur from the British Government for his exceptional work and
-                        report of the toddy
-                        survey of Bihar.
-                        Ever since its establishment, the college has been imparting education in
-                        the faculties of Science, Arts and Commerce up to the Graduation level.
-                        The State Government has granted permanent affiliation in Science,
-                        Arts & Commerce up to Degree level. The college also provides
-                        Post Graduation education in Botany, Chemistry, Zoology and Psychology.
-                        This UGC-enlisted college also offers vocational courses in Computer Application,
-                        Management and Interdisciplinary Biotechnology
-                        (B.C.A., B.B.M. & Bachelor of Biotechnology Hons.).
-                        It has the distinction of being the first college
-                        in the Magadh division of Bihar to start Biotechnology course in 2005.
-                        This college has a well developed infrastructure in terms of faculty,
-                        library and laboratories for imparting quality education to its students.
-                        Some major departments of this college have provision of seminar library.
-                        This college has separate arrangement for the
-                        education of girl students in the morning shift
-                    </p>
+
                 </div>
                 <!--end of content left-->
                 <div id="contentRight">
                     <h2 id="latestUpdates">Latest Updates</h2>
                     <marquee direction="up" behavior="scroll" onmouseover="this.stop();" onmouseout="this.start();">
-                        <p style="font-size:17px; text-align:justify; color:black; margin: 5px;height:350px;">
-                            <b>Mirza Ghalib College </b>
-                            All the information about college and its courses are taken from college website.
-                            We work hard to make sure the data remains fresh and updated, but still students
-                            are advised to check with college or visit official website for recent information.
-                            If you are administrator or webmaster and wish to update information, please get in touch
-                            with us.......
-                            Generations of past students, both male and female, are proud to be known and enjoy
-                            maintaining their connection with the college and each other.
+                        <p id="notice"
+                            style="font-size:17px; text-align:justify; color:black; margin: 5px;height:350px;">
+
                         </p>
                     </marquee>
                 </div>
@@ -154,11 +111,10 @@
             <section id="LatestVideo" data-aos="fade-up" data-aos-duration="1000">
                 <h2 style="font-size:25px; text-transform:capitalize; color: crimson;text-align: left;background: #eeeeee;    padding-left: 10px;
                 ">Videos</h2>
-                <iframe src="https://www.youtube.com/embed/OsR0pDE0zwo" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/tCAt8eEKPDc" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/Fkd9TWUtFm0" frameborder="0" allowfullscreen></iframe>
-                <iframe src="https://www.youtube.com/embed/oV74Najm6Nc" frameborder="0" allowfullscreen></iframe>
-
+                <div id="youtubeVideo">
+                        
+                </div>
+            
             </section>
             <!--end of LatestVideo-->
             <div id="footer">
@@ -228,7 +184,34 @@
             }
         });
         //gallery ajax call
+        $.ajax({
+            type: "get",
+            url: "http://mgcollege.pythonanywhere.com/apiv1/youtube_video_list",
+            dataType: "json",
+            success: function (response) {
+                var i;
+                var videolist = '';
+                for (i = 0; i < response.length; i++) {
+                    console.log(response[i].video_url);
+                    videolist += '<iframe src="'+response[i].video_url+'" frameborder="0" allowfullscreen></iframe>';
+                }
+                document.getElementById("youtubeVideo").innerHTML = videolist;
+               
+            }
+        });
 
+
+        $.ajax({
+    type:"get",
+    url:"http://mgcollege.pythonanywhere.com/apiv1/organisation_details/",
+    dataType:"json",
+    success:function(response){
+    document.getElementById("contentLeft").innerHTML = response[0].about_organisation;
+    document.getElementById("notice").innerHTML = response[0].notice;
+   
+    }
+});
     </script>
 </body>
+
 </html>

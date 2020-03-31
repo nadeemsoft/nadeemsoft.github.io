@@ -4,8 +4,11 @@ $.ajax({
     url:"http://mgcollege.pythonanywhere.com/apiv1/organisation_details/",
     dataType:"json",
     success:function(response){
+        console.log(response);
     document.getElementById("logo").src= response[0].logo;
     document.getElementById("orgName").innerHTML = response[0].organisation_name;
+    // document.getElementById("contentLeft").innerHTML = response[0].about_organisation;
+    // document.getElementById("notice").innerHTML = response[0].notice;
     document.getElementById("contactNo").innerHTML = response[0].contact_no;
     document.getElementById("emailIdTop").innerHTML = response[0].email_id;
     document.getElementById("facebookUrl").href = response[0].facebook_link;
@@ -20,4 +23,8 @@ $.ajax({
     document.getElementById("footerAddress").innerHTML = response[0].address;
     }
 });
+
+  
+    
+    
 

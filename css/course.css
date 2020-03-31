@@ -1,0 +1,59 @@
+.course{
+    width: 100%;
+    height:auto;
+    display: flex;
+    text-align: center;
+    text-transform: capitalize;
+}
+.courseOuterDiv{
+    width: 25%;
+    float: left;
+    height: 248px;
+    margin-bottom: 0px;
+    position: relative;
+}
+.courseOuterDiv .course-title{
+    position: absolute;
+    top: 138px;
+    z-index: 100000;
+    width: 100%;
+}
+.courseOuterDiv .course-title h4{
+    background: #eee;
+    width: 92%;
+    font-size: 17px;
+    text-transform: uppercase;
+    padding: 2px
+    
+}
+.courseOuterDiv .course-title .des{
+    background: #de8484;
+    width: 92%;
+    font-size: 13px;
+    padding: 2px;
+    height: 63px;
+    overflow: auto;
+    
+}
+
+.courseOuterDiv img{
+    width: 317px;
+    height: 217px;
+    margin-top: 12px;
+    border: 2px solid #177a90;
+    box-shadow: 9px 11px 10px -4px;
+    border-radius: 9px;
+}
+#text{
+    
+    font-size: 27px;
+    width: 37%;
+    padding-left: 47px;
+    margin-left: 377px;
+    margin-top: 10px;
+    letter-spacing: 11px;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 8px -4px;
+    border-radius: 8px;
+    background-color: #ca9898;
+}
