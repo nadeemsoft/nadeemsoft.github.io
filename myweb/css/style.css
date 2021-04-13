@@ -8,13 +8,16 @@ a{
 li{
     list-style: none;
 }
+i{
+    color: rgb(12, 94, 141);
+}
  p{
      font-size: 0.9rem;
      line-height: 1.6;
      font-weight: 400;
      color: rgb(39, 44, 44);
  }
-    .extra-div h2{
+    .extra-div h2, .servicediv h2{
         font-size: 19px;
         margin: 20px 0px 15px 0px;
         font-weight: bold;
@@ -132,4 +135,34 @@ li{
     transform: translateY(-20px);
     border-radius: 20px;
     }
-    /*************************header etra div***************/
+    /*************************header etra div end***************/
+
+    /*****************service start***************************/
+    .serviceoffers{
+        background-color: #fafbfd;
+        padding: 50px 0px;
+        margin-bottom: 50px;
+    }
+    .headings{
+        margin-bottom: 50px;
+    }
+    .headings h1{
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+    .names h1{
+        color: rgb(59, 99, 99);
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .service-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .progress{
+        height: 0.6rem!important;
+        margin-bottom: 25px!important;
+
+    }
+    /*****************service end***************************/
