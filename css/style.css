@@ -130,10 +130,11 @@ i{
     border-radius: 3px;
     transition: 0.9;
     border-radius: 20px;
+    margin-bottom: 20px;
 }
 .extra-div:hover{
-    box-shadow: 5px 2px 20px 0px rgb(44, 43, 43);
-    transform: translateY(-20px);
+    box-shadow: 5px 2px 8px 0px rgba(111, 14, 14);
+    transform: translateY(-8px);
     border-radius: 20px;
     background-color: rgb(233, 247, 189);
     }
