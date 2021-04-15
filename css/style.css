@@ -134,7 +134,7 @@ i{
 }
 .extra-div:hover{
     box-shadow: 5px 2px 8px 0px rgba(111, 14, 14);
-    transform: translateY(-8px);
+    transform: translateY(-7px);
     border-radius: 20px;
     background-color: rgb(233, 247, 189);
     }
